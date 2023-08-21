@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+         <link rel="icon" type="image/x-icon" href="/Logo/apple-touch-icon.png">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+        />
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+        ></script>
+        <!-----Font used-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet" />
+    </head>
+    <body background="./carworldBG.jpg">
+        <div
+            class="container"
+            style="
+                background-image: url(https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhcnN8ZW58MHx8MHx8fDA%3D&w=1000&q=80);
+            "
+        >
+            <div class="row mt-5">
+                <h1
+                    class="text-center mt-1 pb-3"
+                    style="
+                        font-family: 'Vina Sans', cursive;
+                        font-size: 100px;
+                        color: #befd10;
+                        text-shadow: 1px 1px 1px #919191, 1px 2px 1px #000000, 1px 3px 1px #000000, 1px 4px 1px #000000,
+                            1px 5px 1px #000000, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191,
+                            1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+                            1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+                            1px 30px 60px rgba(16, 16, 16, 0.4);
+                    "
+                >
+                    CAR World
+                </h1>
+                <div class="col-4 border border-2 p-5">
+                    <h5>Car</h5>
+                    <input type="text" id="cbrand" placeholder="Brand" class="form-control" autocomplete="off" />
+                    <h5>Price</h5>
+                    <input type="text" id="cprice" placeholder="Price" class="form-control" autocomplete="off" />
+                    <h5>Key</h5>
+                    <input type="text" id="ckey" placeholder="Key" class="form-control mb-2" autocomplete="off" />
+                    <button type="submit" class="btn btn-primary btn-round-2 btn-outline-none" onclick="storeRecords()">
+                        Store Records
+                    </button>
+                    <div id="storeRecordsSuccessfully"></div>
+                </div>
+                <div class="col-4 border bordr-2 p-5">
+                    <p style="font-weight: bold">Enter key to retrieve item</p>
+                    <p>
+                        <input type="text" id="retrieveKey" placeholder="Retrieve Key" class="form-control mb-3" required />
+                        <button type="submit" class="btn btn-warning" onclick="searchRecord()">Retrieve Record</button>
+                    </p>
+
+                    <div id="searchResult"></div>
+                </div>
+                <div class="col-4 border bordr-2 p-5">
+                    <p style="font-weight: bold">Enter key to delete a record</p>
+                    <p>
+                        <input type="text" id="Remove" placeholder="Key" class="form-control mb-3">
+                        <button type="submit" class="btn btn-danger" onclick="removeItem()">Delete Item</button>
+                    </p>
+
+                    <div id="RemoveItem" style="color: chartreuse"></div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-1">
+            <button style="width: 1145px" type="submit" class="btn btn-warning btn-outline-none" onclick="clearAll()">
+                Clear All
+            </button>
+        </div>
+        <div id="Clear" class="text-center fs-3"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
